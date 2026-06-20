@@ -35,7 +35,7 @@ const Favourites = () => {
     }, []),
   );
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.darkBackground }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <ScreenHeaderBtn />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
