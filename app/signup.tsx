@@ -28,6 +28,7 @@ const SignUp = () => {
     await AsyncStorage.setItem("userDetails", JSON.stringify(userDetails));
     console.log("User logged in:", userDetails);
 
+    //3. routing navigation
     router.push("/login");
   };
 
