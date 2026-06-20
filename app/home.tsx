@@ -7,6 +7,7 @@ import Welcome from "../components/Welcome";
 import PopularMeditation from "../components/PopularMeditation";
 import DailyMeditation from "../components/DailyMeditation";
 import DailyQuote from "../components/DailyQuote";
+import { useTheme } from "../context/ThemeProvider";
 
 const Home = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -20,6 +21,12 @@ const Home = () => {
     console.log("user", user);
     setUserDetails(user);
   };
+
+  const { theme, toggleTheme } = useTheme();
+  console.log("theme", theme);
+  console.log('toggleTheme', toggleTheme);
+  const isDarkMode = theme === "dark";
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <ScreenHeaderBtn />
